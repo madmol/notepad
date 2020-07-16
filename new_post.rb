@@ -1,13 +1,13 @@
-# notepad main
+# notepad new post
 require_relative 'post.rb'
 require_relative 'link.rb'
 require_relative 'memo.rb'
 require_relative 'task.rb'
 
-puts "Hello! I'm your notepad!"
+puts "Hello! I'm your notepad! v2 + SQLite"
 puts "What do you want to write in notepad?"
 
-choices = Post.post_types
+choices = Post.post_types.keys
 
 user_choice = -1
 
@@ -22,9 +22,9 @@ while user_choice < 0 || user_choice >= (choices.size) do
 end
 
 # create an object of chosen type
-entry = Post.create(user_choice)
+entry = Post.create(choices[user_choice])
 
 entry.read_from_console
-entry.save
+id = entry.save_to_db
 
-puts "Huray! Note created!"
+puts "Huray! Note created!, id = #{id}"
