@@ -3,7 +3,7 @@ It's a ruby console application like mini notepad.
 This apllication is written on ruby version 2.7.1, but it's probably would be working on earlier versions of ruby.
 It's necessary to install sqlite, for ubuntu instruction can be found at [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-sqlite-on-ubuntu-20-04).
 To run this apllication you should have installed ruby and downloaded [zip archive](https://github.com/madmol/notepad/archive/refs/heads/master.zip).
-You should go to unpacked folder notepad-master and create SQLite database
+You should go to unpacked folder notepad-master and create SQLite database:
 ```
 sqlite3 notepad
 ```
@@ -32,4 +32,9 @@ You can output created record:
 
 ```
 ruby read.rb
+```
+The output looks like:
+
+```
+| id                 | @type              | @created_at        | @text              | @url               | @due_date          |
 ```
