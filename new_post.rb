@@ -1,8 +1,8 @@
 # notepad new post
-require_relative 'post.rb'
-require_relative 'link.rb'
-require_relative 'memo.rb'
-require_relative 'task.rb'
+require_relative 'lib/post'
+require_relative 'lib/link'
+require_relative 'lib/memo'
+require_relative 'lib/task'
 
 puts "Hello! I'm your notepad! v2 + SQLite"
 puts "What do you want to write in notepad?"
